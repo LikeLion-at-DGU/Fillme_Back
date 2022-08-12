@@ -51,7 +51,6 @@ def post_detail_update_delete(request, post_pk):
         return Response(serializer.data)
 
     elif request.method == 'DELETE':
-        request.data['writer'] = user.id
         post.delete()
         data = {
             'post':post_pk
@@ -60,32 +59,15 @@ def post_detail_update_delete(request, post_pk):
 
 
 # COMMENT(댓글) 관련
-# 1. 특정 댓글 가져 오기 / 삭제 / 수정
-@api_view(['GET', 'DELETE', 'PATCH'])
+# 1. 모든 댓글 리스트 가져 오기
+@api_view(['GET'])
 @permission_classes([IsAuthenticatedOrReadOnly])
-def comment_list_detail(request, comment_pk) :
+def comment_list(request):
     user = request.user
-    comments = get_list_or_404(Comment, pk = comment_pk)
-
-    if request.method == 'GET' :
-        request.data['writer'] = user.id
-        serializer = CommentSerializer(comments)
-        return Response(serializer.data)
-
-    elif request.method == "DELETE" :
-        request.data['writer'] = user.id
-        comments.delete()
-        data= {
-            'delete' : comment_pk
-        }
-        return Response(data)
-
-    elif request.method == "PATCH" :
-        request.data['writer'] = user.id
-        serializer = CommentSerializer(instance = comments, data = request.data)
-        if serializer.is_valid(raise_exception=True) :
-            serializer.save()
-            return Response(serializer.data)
+    request.data['writer'] = user.id
+    comment = Comment.objects.all()
+    serializer = CommentSerializer(comment, many = True)
+    return Response(serializer.data)
 
 # 2. 특정 게시물의 댓글 보기 / 작성하기
 @api_view(['GET', 'POST'])
@@ -116,7 +98,7 @@ def post_comment_list(request, post_id):
 def post_comment_detail_update_delete(request, post_pk, comment_pk):
     user = request.user
     post = get_object_or_404(Post, pk = post_pk)
-    comment = Comment.objects.get(pk = comment_pk)
+    comment = get_object_or_404(Comment.objects.filter(post = post_pk), pk = comment_pk)
 
     if request.method == 'GET':
         request.data['writer'] = user.id
