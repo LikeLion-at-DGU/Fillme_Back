@@ -21,7 +21,6 @@ class Post(models.Model):
     image10 = models.ImageField(upload_to="post/", blank = True, null = True)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
-    # 좋아요 기능 추가해야 함
 
 class Comment(models.Model):
     id = models.AutoField(primary_key = True)
