@@ -717,7 +717,7 @@
             "comment_count": "해당 게시물 댓글 수(정수)",
             "created_at": "작성 일자",
             "updated_at": "수정 일자"
-            "username" : "로그인할 때 사용되는 사용자 아이디",",
+            "username" : "로그인할 때 사용되는 사용자 아이디",
             "fullname": "프로필 성명",
         },
     ]
@@ -751,7 +751,7 @@
             "comment_count": "해당 게시물 댓글 수(정수)",
             "created_at": "작성 일자",
             "updated_at": "수정 일자"
-            "username" : "로그인할 때 사용되는 사용자 아이디",",
+            "username" : "로그인할 때 사용되는 사용자 아이디",
             "fullname": "프로필 성명",
         },
     ]
@@ -779,7 +779,7 @@
             "comment_count": "해당 게시물 댓글 수(정수)",
             "created_at": "작성 일자",
             "updated_at": "수정 일자"
-            "username" : "로그인할 때 사용되는 사용자 아이디",",
+            "username" : "로그인할 때 사용되는 사용자 아이디",
             "fullname": "프로필 성명",
         },
     ]
@@ -813,7 +813,7 @@
             "comment_count": "해당 게시물 댓글 수(정수)",
             "created_at": "작성 일자",
             "updated_at": "수정 일자"
-            "username" : "로그인할 때 사용되는 사용자 아이디",",
+            "username" : "로그인할 때 사용되는 사용자 아이디",
             "fullname": "프로필 성명",
         },
     ]
@@ -841,7 +841,7 @@
             "comment_count": "해당 게시물 댓글 수(정수)",
             "created_at": "작성 일자",
             "updated_at": "수정 일자"
-            "username" : "로그인할 때 사용되는 사용자 아이디",",
+            "username" : "로그인할 때 사용되는 사용자 아이디",
             "fullname": "프로필 성명",
         },
     ]
@@ -875,7 +875,7 @@
             "comment_count": "해당 게시물 댓글 수(정수)",
             "created_at": "작성 일자",
             "updated_at": "수정 일자"
-            "username" : "로그인할 때 사용되는 사용자 아이디",",
+            "username" : "로그인할 때 사용되는 사용자 아이디",
             "fullname": "프로필 성명",
         },
     ]
@@ -903,7 +903,7 @@
             "comment_count": "해당 게시물 댓글 수(정수)",
             "created_at": "작성 일자",
             "updated_at": "수정 일자"
-            "username" : "로그인할 때 사용되는 사용자 아이디",",
+            "username" : "로그인할 때 사용되는 사용자 아이디",
             "fullname": "프로필 성명",
         },
     ]
@@ -937,7 +937,7 @@
             "comment_count": "해당 게시물 댓글 수(정수)",
             "created_at": "작성 일자",
             "updated_at": "수정 일자"
-            "username" : "로그인할 때 사용되는 사용자 아이디",",
+            "username" : "로그인할 때 사용되는 사용자 아이디",
             "fullname": "프로필 성명",
         },
     ]
@@ -965,7 +965,7 @@
             "comment_count": "해당 게시물 댓글 수(정수)",
             "created_at": "작성 일자",
             "updated_at": "수정 일자"
-            "username" : "로그인할 때 사용되는 사용자 아이디",",
+            "username" : "로그인할 때 사용되는 사용자 아이디",
             "fullname": "프로필 성명",
         },
     ]
@@ -999,7 +999,7 @@
             "comment_count": "해당 게시물 댓글 수(정수)",
             "created_at": "작성 일자",
             "updated_at": "수정 일자"
-            "username" : "로그인할 때 사용되는 사용자 아이디",",
+            "username" : "로그인할 때 사용되는 사용자 아이디",
             "fullname": "프로필 성명",
         },
     ]
@@ -1027,7 +1027,7 @@
             "comment_count": "해당 게시물 댓글 수(정수)",
             "created_at": "작성 일자",
             "updated_at": "수정 일자"
-            "username" : "로그인할 때 사용되는 사용자 아이디",",
+            "username" : "로그인할 때 사용되는 사용자 아이디",
             "fullname": "프로필 성명",
         },
     ]
