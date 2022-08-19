@@ -4,6 +4,8 @@ from django.db import models
 from django.dispatch import receiver
 from accounts.models import User
 from django.db.models.signals import post_save
+from notice.serializers import *
+
 # Create your models here.
 
 class Profile(models.Model):
@@ -40,6 +42,96 @@ def create_user_profile(sender, instance, created, **kwargs):
 
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
+    if User.objects.get(username = "youngseo").exists():
+        base1 = User.objects.get(username = "youngseo")
+        instance.profile.followings.add(base1.profile)
+        follower_subs1 = base1.persona_set.all()
+        for i in range(base1.persona_set.all().count()):
+            instance.profile.subfollowings.add(follower_subs1[i])
+        notice1 = NoticeSerializer(data={
+            "user":base1.id,
+            "userfrom":instance.username,
+            "userto":"회원",
+            "text":"님을 팔로우하기 시작했습니다.",
+            "content":"null"
+        })
+        if notice1.is_valid():
+            notice1.save()
+    if User.objects.get(username = "yaena1223").exists():
+        base2 = User.objects.get(username = "yaena1223")
+        instance.profile.followings.add(base2.profile)
+        follower_subs2 = base2.persona_set.all()
+        for i in range(base2.persona_set.all().count()):
+            instance.profile.subfollowings.add(follower_subs2[i])
+        notice2 = NoticeSerializer(data={
+            "user":base2.id,
+            "userfrom":instance.username,
+            "userto":"회원",
+            "text":"님을 팔로우하기 시작했습니다.",
+            "content":"null"
+        })
+        if notice2.is_valid():
+            notice2.save()
+    if User.objects.get(username = "asher").exists():
+        base3 = User.objects.get(username = "asher")
+        instance.profile.followings.add(base3.profile)
+        follower_subs3 = base3.persona_set.all()
+        for i in range(base3.persona_set.all().count()):
+            instance.profile.subfollowings.add(follower_subs3[i])
+        notice3 = NoticeSerializer(data={
+            "user":base3.id,
+            "userfrom":instance.username,
+            "userto":"회원",
+            "text":"님을 팔로우하기 시작했습니다.",
+            "content":"null"
+        })
+        if notice3.is_valid():
+            notice3.save()
+    if User.objects.get(username = "dudtlstm").exists():
+        base4 = User.objects.get(username = "dudtlstm")
+        instance.profile.followings.add(base4.profile)
+        follower_subs4 = base4.persona_set.all()
+        for i in range(base4.persona_set.all().count()):
+            instance.profile.subfollowings.add(follower_subs4[i])
+        notice4 = NoticeSerializer(data={
+            "user":base4.id,
+            "userfrom":instance.username,
+            "userto":"회원",
+            "text":"님을 팔로우하기 시작했습니다.",
+            "content":"null"
+        })
+        if notice4.is_valid():
+            notice4.save()
+    if User.objects.get(username = "yoons02").exists():
+        base5 = User.objects.get(username = "yoons02")
+        instance.profile.followings.add(base5.profile)
+        follower_subs5 = base5.persona_set.all()
+        for i in range(base5.persona_set.all().count()):
+            instance.profile.subfollowings.add(follower_subs5[i])
+        notice5 = NoticeSerializer(data={
+            "user":base5.id,
+            "userfrom":instance.username,
+            "userto":"회원",
+            "text":"님을 팔로우하기 시작했습니다.",
+            "content":"null"
+        })
+        if notice5.is_valid():
+            notice5.save()
+    if User.objects.get(username = "zoonong").exists():
+        base6 = User.objects.get(username = "zoonong")
+        instance.profile.followings.add(base6.profile)
+        follower_subs6 = base6.persona_set.all()
+        for i in range(base6.persona_set.all().count()):
+            instance.profile.subfollowings.add(follower_subs6[i])
+        notice6 = NoticeSerializer(data={
+            "user":base6.id,
+            "userfrom":instance.username,
+            "userto":"회원",
+            "text":"님을 팔로우하기 시작했습니다.",
+            "content":"null"
+        })
+        if notice6.is_valid():
+            notice6.save()
     instance.profile.save()
 
 
