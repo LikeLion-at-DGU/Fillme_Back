@@ -42,8 +42,8 @@ def create_user_profile(sender, instance, created, **kwargs):
 
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
-    if User.objects.get(username = "youngseo").exists():
-        base1 = User.objects.get(username = "youngseo")
+    if User.objects.filter(username = "youngseo").exists():
+        base1 = User.objects.filter(username = "youngseo")[0]
         instance.profile.followings.add(base1.profile)
         follower_subs1 = base1.persona_set.all()
         for i in range(base1.persona_set.all().count()):
@@ -57,8 +57,8 @@ def save_user_profile(sender, instance, **kwargs):
         })
         if notice1.is_valid():
             notice1.save()
-    if User.objects.get(username = "yaena1223").exists():
-        base2 = User.objects.get(username = "yaena1223")
+    if User.objects.filter(username = "yaena1223").exists():
+        base2 = User.objects.filter(username = "yaena1223")[0]
         instance.profile.followings.add(base2.profile)
         follower_subs2 = base2.persona_set.all()
         for i in range(base2.persona_set.all().count()):
@@ -72,8 +72,8 @@ def save_user_profile(sender, instance, **kwargs):
         })
         if notice2.is_valid():
             notice2.save()
-    if User.objects.get(username = "asher").exists():
-        base3 = User.objects.get(username = "asher")
+    if User.objects.filter(username = "asher").exists():
+        base3 = User.objects.filter(username = "asher")[0]
         instance.profile.followings.add(base3.profile)
         follower_subs3 = base3.persona_set.all()
         for i in range(base3.persona_set.all().count()):
@@ -87,8 +87,8 @@ def save_user_profile(sender, instance, **kwargs):
         })
         if notice3.is_valid():
             notice3.save()
-    if User.objects.get(username = "dudtlstm").exists():
-        base4 = User.objects.get(username = "dudtlstm")
+    if User.objects.filter(username = "dudtlstm").exists():
+        base4 = User.objects.filter(username = "dudtlstm")[0]
         instance.profile.followings.add(base4.profile)
         follower_subs4 = base4.persona_set.all()
         for i in range(base4.persona_set.all().count()):
@@ -102,8 +102,8 @@ def save_user_profile(sender, instance, **kwargs):
         })
         if notice4.is_valid():
             notice4.save()
-    if User.objects.get(username = "yoons02").exists():
-        base5 = User.objects.get(username = "yoons02")
+    if User.objects.filter(username = "yoons02").exists():
+        base5 = User.objects.filter(username = "yoons02")[0]
         instance.profile.followings.add(base5.profile)
         follower_subs5 = base5.persona_set.all()
         for i in range(base5.persona_set.all().count()):
@@ -117,8 +117,8 @@ def save_user_profile(sender, instance, **kwargs):
         })
         if notice5.is_valid():
             notice5.save()
-    if User.objects.get(username = "zoonong").exists():
-        base6 = User.objects.get(username = "zoonong")
+    if User.objects.filter(username = "zoonong").exists():
+        base6 = User.objects.filter(username = "zoonong")[0]
         instance.profile.followings.add(base6.profile)
         follower_subs6 = base6.persona_set.all()
         for i in range(base6.persona_set.all().count()):
