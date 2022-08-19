@@ -71,7 +71,7 @@ MIDDLEWARE = [
 
 ## 리액트 연동
 
-CORS_ORIGIN_WHITELIST = ('http://127.0.0.1:3000', 'http://localhost:3000','http://127.0.0.1:3001', 'http://localhost:3001', 'http://fillme.site', 'http://www.fillme.site')
+CORS_ORIGIN_WHITELIST = ('http://127.0.0.1:3000', 'http://localhost:3000','http://127.0.0.1:3001', 'http://localhost:3001', 'http://fillme.site', 'http://www.fillme.site','https://fillme.site','https://www.fillme.site')
 CORS_ALLOW_CREDENTIALS = True
 
 AUTH_USER_MODEL = 'accounts.User'
