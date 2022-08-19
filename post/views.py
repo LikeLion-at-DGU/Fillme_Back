@@ -200,7 +200,7 @@ def subfollowing_post_list(request):
     subfollowings = user.profile.subfollowings.all() # 내가 팔로우한 유저들 불러 오기
     # persona = get_object_or_404(Persona, pk = persona_id)    
     postList = []
-
+    is_follower = user.profile in fillme.profile.followers.all()
     if request.method == 'GET':
         for subfollowing in subfollowings:
                 posts = Post.objects.filter(persona = subfollowing)
@@ -214,11 +214,12 @@ def subfollowing_post_list(request):
         mypostData = list(myPost.data)
         for data in mypostData:
             postList.append(data)
-        fillmeposts = Post.objects.filter(writer = fillme)
-        fillmepost = AllPostSerializer(fillmeposts, many=True)
-        fillmedata = list(fillmepost.data)
-        for data in fillmedata:
-            postList.append(data)
+        if not is_follower:
+            fillmeposts = Post.objects.filter(writer = fillme)
+            fillmepost = AllPostSerializer(fillmeposts, many=True)
+            fillmedata = list(fillmepost.data)
+            for data in fillmedata:
+                postList.append(data)
         serializer = sorted(postList, key = lambda k: k.get('created_at',0), reverse = True)
         return Response(serializer)
 
